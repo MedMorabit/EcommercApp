@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@drawable/blury_background"
+    >
+</ImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+        style="@style/h3"
+        android:id="@+id/tvAppNameLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_kleine_shape"
+        android:text="Keline"
+        android:gravity="center"
+        android:layout_marginTop="120dp"
+        android:drawablePadding="6dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/LetsLogin"
+        style="@style/h4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/LoginTxt"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+        app:layout_constraintTop_toBottomOf="@id/tvAppNameLogin">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvDontHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/dontHaveAccount"
+        style="@style/h2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LetsLogin">
+
+    </TextView>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideRightLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideleftLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_marginTop="50dp"
+            style="@style/editText"
+            android:id="@+id/editTxt_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@id/guideRightLogin"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            app:layout_constraintTop_toBottomOf="@+id/tvDontHaveAccount"
+            android:layout_height="@dimen/editTxtHight">
+
+        </EditText>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_marginTop="15dp"
+            style="@style/editText"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:id="@+id/editText_Password"
+            app:layout_constraintEnd_toEndOf="@id/guideRightLogin"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            app:layout_constraintTop_toBottomOf="@+id/editTxt_email"
+            android:layout_height="@dimen/editTxtHight">
+
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"
+            android:id="@+id/forget_Password"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/editText_Password"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            >
+
+        </TextView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerButtonAccountOption"
+            style="@style/blueButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/meduimButtonHeight"
+            android:text="Register"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@id/guideRightLogin"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            app:layout_constraintTop_toBottomOf="@id/forget_Password"
+           >
+
+        </androidx.appcompat.widget.AppCompatButton>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EcommercApp</string>
+    <string name="shopingTxt">The Right Address\nFor Shopping\nAnyDay</string>
+    <string name="subTitleQuality">it is now very easy to reach the\n best quality among the\n product on the internet</string>
+    <string name="LoginTxt">Let\'s Login</string>
+    <string name="dontHaveAccount">Don\'t have an account? Register now</string>
+</resources>

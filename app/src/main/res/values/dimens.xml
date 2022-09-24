@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvRightAddress">15</dimen>
+    <dimen name="marginQualityTxt">16</dimen>
+    <dimen name="smallButtonHeight">55</dimen>
+    <dimen name="smallButtonWidth">130</dimen>
+    <dimen name="buttonCorners">5</dimen>
+    <dimen name="medumButtonWidth">200</dimen>
+    <dimen name="meduimButtonHeight">55</dimen>
+    <dimen name="editTxtHight">60</dimen>
+</resources>
