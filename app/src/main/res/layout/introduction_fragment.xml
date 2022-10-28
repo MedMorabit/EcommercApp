@@ -16,14 +16,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leftImage"
+        android:src="@drawable/ic_texture_right"
 
+        >
+
+    </ImageView>
 
 
     <ImageView
-        android:layout_width="0dp"
+        android:layout_width="170dp"
         android:layout_height="0dp"
         android:id="@+id/elips"
-        android:src="@drawable/ellips"
+        android:src="@drawable/logoo"
         app:layout_constraintDimensionRatio="1:1"
        app:layout_constraintTop_toTopOf="@id/guidelineEclipsTop"
         app:layout_constraintStart_toStartOf="@id/guidelineLeft"
@@ -32,21 +41,6 @@
 
     </ImageView>
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/h4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/tvRightAddress"
-        android:gravity="center"
-        android:text="@string/shopingTxt"
-        android:textSize="35dp"
-        app:layout_constraintBottom_toBottomOf="@+id/elips"
-        app:layout_constraintEnd_toEndOf="@id/elips"
-        app:layout_constraintStart_toStartOf="@id/elips"
-        app:layout_constraintTop_toTopOf="@id/guidelineTexture">
-
-    </TextView>
 
     <TextView
         android:id="@+id/tvQuality"
@@ -61,27 +55,20 @@
         app:layout_constraintTop_toBottomOf="@+id/guidelineEclipsBottom">
 
     </TextView>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/leftImage"
-        android:src="@drawable/ic_texture_right"
 
-        >
-
-    </ImageView>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIntro"
+        style="@style/blueButtonStyle"
         android:layout_width="@dimen/smallButtonWidth"
         android:layout_height="@dimen/smallButtonHeight"
-        style="@style/blueButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/tvQuality"
-        app:layout_constraintStart_toStartOf="@id/tvQuality"
-        app:layout_constraintEnd_toEndOf="@id/tvQuality"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvQuality"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@id/tvQuality"
 
-        >
+        app:layout_constraintTop_toBottomOf="@id/tvQuality"
+        app:layout_constraintVertical_bias="0.344">
 
     </androidx.appcompat.widget.AppCompatButton>
 

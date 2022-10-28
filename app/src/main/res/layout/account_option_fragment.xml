@@ -7,7 +7,6 @@
 <ImageView
     android:layout_width="match_parent"
     android:scaleType="centerCrop"
-    android:src="@drawable/blury_background"
     android:layout_height="match_parent">
 
 </ImageView>
@@ -15,35 +14,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            style="@style/h3"
-            android:id="@+id/tvAppName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_kleine_shape"
-            android:text="Keline"
-            android:gravity="center"
-            android:layout_marginTop="120dp"
-            android:drawablePadding="6dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-        </TextView>
 
         <TextView
             android:id="@+id/RightAddressAccountTv"
             style="@style/h4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:gravity="center"
+            android:layout_marginTop="80dp"
             android:text="@string/shopingTxt"
-            android:textSize="35dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvAppName">
+            app:layout_constraintTop_toTopOf="parent">
 
         </TextView>
 

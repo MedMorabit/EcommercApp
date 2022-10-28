@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_graph"
+    app:startDestination="@id/introductionFragment">
+
+    <fragment
+        android:id="@+id/introductionFragment"
+        tools:layout="@layout/introduction_fragment"
+        android:name="com.example.ecommercapp.fragments.IntroductionFragment"
+        android:label="IntroductionFragment" >
+
+        <action
+            android:id="@+id/action_introductionFragment_to_accountOptionsFragment"
+            app:destination="@id/accountOptionsFragment"
+            app:enterAnim="@anim/from_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecommercapp.fragments.LoginFragment"
+        tools:layout="@layout/login_fragment"
+        android:label="LoginFragment" >
+        <action
+            app:enterAnim="@anim/from_right"
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/accountOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        tools:layout="@layout/register_fragment"
+        android:name="com.example.ecommercapp.fragments.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            app:enterAnim="@anim/from_right"
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/accountOptionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountOptionsFragment"
+        tools:layout="@layout/account_option_fragment"
+        android:name="com.example.ecommercapp.fragments.AccountOptionsFragment"
+        android:label="AccountOptionsFragment" >
+        <action
+            android:id="@+id/action_accountOptionsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right" />
+        <action
+
+            android:id="@+id/action_accountOptionsFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right" />
+    </fragment>
+</navigation>

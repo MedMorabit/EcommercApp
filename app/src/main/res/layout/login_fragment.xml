@@ -8,7 +8,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scaleType="centerCrop"
-    android:src="@drawable/blury_background"
     >
 </ImageView>
 
@@ -21,9 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_kleine_shape"
-        android:text="Keline"
+        android:text="SEco"
         android:gravity="center"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         android:drawablePadding="6dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/guideleftLogin"
@@ -45,19 +44,17 @@
 
     </TextView>
 
-    <TextView
-        android:id="@+id/tvDontHaveAccount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/tvDontHaveAccount"
+            style="@style/h2"
+            android:layout_width="wrap_content"
 
-        android:text="@string/dontHaveAccount"
-        style="@style/h2"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LetsLogin">
+            android:layout_height="wrap_content"
+            android:text="@string/dontHaveAccount"
+            app:layout_constraintStart_toStartOf="@+id/LetsLogin"
+            app:layout_constraintTop_toBottomOf="@+id/LetsLogin">
 
-    </TextView>
+        </TextView>
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideRightLogin"
             android:layout_width="wrap_content"
@@ -106,25 +103,75 @@
             android:layout_marginTop="10dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/editText_Password"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="@id/guideleftLogin"
             >
 
         </TextView>
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/registerButtonAccountOption"
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/loginButtonAccountOption"
             style="@style/blueButtonStyle"
             android:layout_width="0dp"
+            app:spinning_bar_color="@color/g_card_background"
             android:layout_height="@dimen/meduimButtonHeight"
-            android:text="Register"
             android:layout_marginTop="16dp"
+            android:text="Login"
             app:layout_constraintEnd_toEndOf="@id/guideRightLogin"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/guideleftLogin"
-            app:layout_constraintTop_toBottomOf="@id/forget_Password"
-           >
+            app:layout_constraintTop_toBottomOf="@id/forget_Password">
 
-        </androidx.appcompat.widget.AppCompatButton>
+        </br.com.simplepass.loadingbutton.customViews.CircularProgressButton>
+
+        <ImageView
+            android:id="@+id/loginFac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/facebook_login"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            app:layout_constraintTop_toBottomOf="@+id/loginButtonAccountOption">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:id="@+id/facTxt"
+            android:layout_marginStart="10dp"
+            android:text="Facebook"
+            app:layout_constraintBottom_toBottomOf="@+id/loginFac"
+            app:layout_constraintEnd_toEndOf="@+id/loginFac"
+            app:layout_constraintStart_toStartOf="@id/guideleftLogin"
+            app:layout_constraintTop_toTopOf="@+id/loginFac">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/loginGgl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google_login"
+            app:layout_constraintBottom_toBottomOf="@+id/loginFac"
+            app:layout_constraintEnd_toStartOf="@+id/guideRightLogin"
+            app:layout_constraintTop_toTopOf="@+id/loginFac">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:textSize="18sp"
+            android:id="@+id/gglTxt"
+            app:layout_constraintBottom_toBottomOf="@+id/loginGgl"
+            app:layout_constraintEnd_toStartOf="@+id/guideRightLogin"
+            app:layout_constraintStart_toStartOf="@+id/loginGgl"
+            app:layout_constraintTop_toTopOf="@+id/loginGgl">
+
+        </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
